@@ -8,7 +8,7 @@ from __future__ import unicode_literals
 AUTHOR = 'OMlalala'
 AUTHOR_INFOS = True
 
-SITENAME = ''
+SITENAME = 'Reborn'
 SITETITLE = 'Reborn'
 SITEURL = 'https://omlalala.github.io'
 
@@ -42,11 +42,15 @@ FILENAME_METADATA = '(?P<slug>.*)'
 PLUGIN_PATHS = ['_plugins']
 PLUGINS = ['i18n_subsites'
     , 'sitemap'
+    , 'extract_toc'
     , 'neighbors'
 ]
+
 JINJA_ENVIRONMENT = {
     'extensions': ['jinja2.ext.i18n'],
 }
+
+#MD_EXTENSIONS = (['toc'])
 
 MARKDOWN = {
     'extension_configs': {
