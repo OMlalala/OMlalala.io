@@ -14,7 +14,7 @@ Slug: 2017-09-02-alfred-workflow
 
 希望输出自己的 投资牛人清单：[OMlalala > Library](https://www.zotero.org/groups/1654579/omlalala/items)
 
-![](http://omjtq6wcu.bkt.clouddn.com/1.jpg)
+![omlalala zotero library](http://omjtq6wcu.bkt.clouddn.com/1.jpg)
 
 ### 流程
 收集牛人的资料时，以自传、他人写的传记、著作、给股东的信等资料为主，故需要查询下述网站
