@@ -2,22 +2,38 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
+###############################################################
+###############################################################   Site abt.
+###############################################################
 AUTHOR = 'OMlalala'
-SITENAME = 'Reborn'
+AUTHOR_INFOS = True
+
+SITENAME = ''
+SITETITLE = 'Reborn'
 SITEURL = 'https://omlalala.github.io'
 
-PATH = 'content'
+MARKUP = ('md', 'rst',)#'rst', 'html', 
+READERS = {
+        'html': None,
+}
+#   TIMEZONE = 'Europe/Paris'
+TIMEZONE = 'Asia/Shanghai'
+DATE_FORMATS = {
+        'zh_CN': '%Y-%m-%d %H:%M',
+}
+DEFAULT_DATE_FORMAT = '%Y-%m-%d %H:%M'
+DEFAULT_DATE = 'fs' # use filesystem's mtime
 
-TIMEZONE = 'Europe/Paris'
-
-DEFAULT_LANG = 'en'
+#LOCALE = ('zh_CN.utf8',)
+DEFAULT_LANG = 'zh_CN'
+FILENAME_METADATA = '(?P<slug>.*)'
 
 # Feed generation is usually not desired when developing
-FEED_ALL_ATOM = None
-CATEGORY_FEED_ATOM = None
-TRANSLATION_FEED_ATOM = None
-AUTHOR_FEED_ATOM = None
-AUTHOR_FEED_RSS = None
+# FEED_ALL_ATOM = None
+# CATEGORY_FEED_ATOM = None
+# TRANSLATION_FEED_ATOM = None
+# AUTHOR_FEED_ATOM = None
+# AUTHOR_FEED_RSS = None
 
 ###############################################################
 ###############################################################   Plugins abt.
