@@ -40,7 +40,9 @@ FILENAME_METADATA = '(?P<slug>.*)'
 ###############################################################
 # Plugins 
 PLUGIN_PATHS = ['_plugins']
-PLUGINS = ['i18n_subsites', ]
+PLUGINS = ['i18n_subsites'
+    , 'sitemap'
+]
 JINJA_ENVIRONMENT = {
     'extensions': ['jinja2.ext.i18n'],
 }
@@ -53,6 +55,20 @@ MARKDOWN = {
         'markdown.extensions.toc' :{'permalink' : 'true'},
     },
     'output_format': 'html5',
+}
+
+SITEMAP = {
+    'format': 'xml',
+    'priorities': {
+        'articles': 0.5,
+        'indexes': 0.5,
+        'pages': 0.5
+    },
+    'changefreqs': {
+        'articles': 'monthly',
+        'indexes': 'daily',
+        'pages': 'monthly'
+    }
 }
 
 ###############################################################
