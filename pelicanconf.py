@@ -96,38 +96,55 @@ DISPLAY_CATEGORIES_ON_MENU = None      # 分类标签是否显示在导航
 ADDTHIS_PROFILE = None #True
     
 #GITHUB_USER = "ZoomQuiet"
-MENUITEMS = (('PyChina', 'http://pychina.org')
+#MENUITEMS = (('PyChina', 'http://pychina.org')
 #    , ('OBP', 'http://obp.zoomquiet.io')
-    , ('abt.', '/pages/about.html')
+#    , ('abt.', '/pages/about.html')
 #    , ('design', '/pages/design.html')
-    )
+#    )
 DISPLAY_PAGES_ON_MENU = True
 
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
 # ('rss', SITEURL + '/' + FEED_ALL_ATOM)
-SOCIAL = (('.io', 'http://ZoomQuiet.io')
-        , ('Wiki', 'http://wiki.zoomquiet.io')
-        , ('旧曰', 'http://blog.zoomquiet.org/pyblosxom/')
-        , ('啄木鸟', 'http://wiki.woodpecker.org.cn/moin/ZoomQuiet')
-        , ('GitHub', 'https://github.com/ZoomQuiet')
-        , ('O.B.P', 'https://github.com/OpenBookProjects/wiki/blob/master/HowToBuildBookOnline.md')
-        , ('Weekly', 'http://weekly.pychina.org/')
-        , ('weibo', 'http://weibo.com/zoomquiet')
+SOCIAL = (('释狮大会', 'https://github.com/DebugUself/leo-editor-cn')
+#          ('.io', 'http://ZoomQuiet.io')
+#        , ('Wiki', 'http://wiki.zoomquiet.io')
+#        , ('旧曰', 'http://blog.zoomquiet.org/pyblosxom/')
+#        , ('啄木鸟', 'http://wiki.woodpecker.org.cn/moin/ZoomQuiet')
+        , ('GitHub', 'https://github.com/OMlalala')
+#        , ('O.B.P', 'https://github.com/OpenBookProjects/wiki/blob/master/HowToBuildBookOnline.md')
+#        , ('Weekly', 'http://weekly.pychina.org/')
         )
 # Blogroll
 LINKS = None
 
-# Blogroll
-# LINKS = (('Pelican', 'http://getpelican.com/'),
-#          ('Python.org', 'http://python.org/'),
-#          ('Jinja2', 'http://jinja.pocoo.org/'),
-#          ('You can modify those links in your config file', '#'),)
+###############################################################
+###############################################################   Publish abt.
+###############################################################
+USE_FOLDER_AS_CATEGORY = True
+#DEFAULT_CATEGORY = 'Chaos'
+#DELETE_OUTPUT_DIRECTORY = None #因为嵌套仓库的原因,不能清除发布目录!
 
-# Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+# TEMPLATE_PAGES = {
+#         "404.html": "404.html",
+#         }
 
-DEFAULT_PAGINATION = 10
+# STATIC_PATHS = ['_images', '_files'
+#     , '_extra/robots.txt'
+#     , '_extra/favicon.ico'
+#     , '_extra/README.log'
+#     , '_extra/LICENSE'
+#     , '_extra/CNAME'
+#     , '_extra/.nojekyll'
+    
+#     ]
+    
+# EXTRA_PATH_METADATA = {'_extra/robots.txt': {'path': 'robots.txt'}
+#     , '_extra/favicon.ico': {'path': 'favicon.ico'}
+#     , '_extra/LICENSE': {'path': 'LICENSE'}
+#     , '_extra/README.log': {'path': 'README.md'}
+#     , '_extra/CNAME': {'path': 'CNAME'}
+#     , '_extra/.nojekyll': {'path': '.nojekyll'}
+# }
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
