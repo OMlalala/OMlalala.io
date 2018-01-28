@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = 'OMlalala'
 SITENAME = 'Reborn'
-SITEURL = ''
+SITEURL = 'https://omlalala.github.io'
 
 PATH = 'content'
 
@@ -18,6 +18,43 @@ CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
+
+###############################################################
+###############################################################   Template abt.
+###############################################################
+THEME = "_themes/pelican-bootstrap3"
+BOOTSTRAP_THEME = 'readable'
+
+DEFAULT_PAGINATION = 3
+
+DISPLAY_TAGS_ON_SIDEBAR = False
+TAG_CLOUD_MAX_ITEMS = 10
+
+DISPLAY_CATEGORIES_ON_MENU = None      # 分类标签是否显示在导航
+# Social widget -> China jiathis.com
+ADDTHIS_PROFILE = None #True
+    
+#GITHUB_USER = "ZoomQuiet"
+MENUITEMS = (('PyChina', 'http://pychina.org')
+#    , ('OBP', 'http://obp.zoomquiet.io')
+    , ('abt.', '/pages/about.html')
+#    , ('design', '/pages/design.html')
+    )
+DISPLAY_PAGES_ON_MENU = True
+
+FEED_ALL_ATOM = 'feeds/all.atom.xml'
+# ('rss', SITEURL + '/' + FEED_ALL_ATOM)
+SOCIAL = (('.io', 'http://ZoomQuiet.io')
+        , ('Wiki', 'http://wiki.zoomquiet.io')
+        , ('旧曰', 'http://blog.zoomquiet.org/pyblosxom/')
+        , ('啄木鸟', 'http://wiki.woodpecker.org.cn/moin/ZoomQuiet')
+        , ('GitHub', 'https://github.com/ZoomQuiet')
+        , ('O.B.P', 'https://github.com/OpenBookProjects/wiki/blob/master/HowToBuildBookOnline.md')
+        , ('Weekly', 'http://weekly.pychina.org/')
+        , ('weibo', 'http://weibo.com/zoomquiet')
+        )
+# Blogroll
+LINKS = None
 
 # Blogroll
 # LINKS = (('Pelican', 'http://getpelican.com/'),
