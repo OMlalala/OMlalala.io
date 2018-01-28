@@ -42,6 +42,7 @@ FILENAME_METADATA = '(?P<slug>.*)'
 PLUGIN_PATHS = ['_plugins']
 PLUGINS = ['i18n_subsites'
     , 'sitemap'
+    , 'neighbors'
 ]
 JINJA_ENVIRONMENT = {
     'extensions': ['jinja2.ext.i18n'],
