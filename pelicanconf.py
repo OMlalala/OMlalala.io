@@ -8,9 +8,9 @@ from __future__ import unicode_literals
 AUTHOR = 'OMlalala'
 AUTHOR_INFOS = True
 
-SITENAME = 'Reborn'
-SITETITLE = 'Reborn'
-SITEURL = 'https://omlalala.github.io'
+SITENAME = 'OMlalala.io'
+SITETITLE = 'OMlalala.io'
+SITEURL = 'https://omlalala.io'
 
 MARKUP = ('md', 'rst',)#'rst', 'html', 
 READERS = {
