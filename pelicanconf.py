@@ -11,6 +11,7 @@ AUTHOR_INFOS = True
 SITENAME = 'OMlalala.io'
 SITETITLE = 'OMlalala.io'
 SITEURL = 'http://omlalala.io'
+DISQUS_SITENAME = "omlalalaio"
 
 MARKUP = ('md', 'rst',)#'rst', 'html', 
 READERS = {
