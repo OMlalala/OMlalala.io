@@ -44,6 +44,7 @@ PLUGINS = ['i18n_subsites'
     , 'sitemap'
     , 'extract_toc'
     , 'neighbors'
+    , 'better_figures_and_images'
 ]
 
 JINJA_ENVIRONMENT = {
@@ -80,6 +81,11 @@ SITEMAP = {
 PYGMENTS_RST_OPTIONS = {'linenos': 'table'}
 
 TYPOGRIFY = True
+
+# Setting for the better_figures_and_images plugin
+RESPONSIVE_IMAGES = True
+FIGURE_NUMBERS = True
+
 ###############################################################
 ###############################################################   Template abt.
 ###############################################################
