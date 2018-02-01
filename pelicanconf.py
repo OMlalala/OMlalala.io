@@ -10,7 +10,7 @@ AUTHOR_INFOS = True
 
 SITENAME = 'OMlalala.io'
 SITETITLE = 'OMlalala.io'
-SITEURL = 'https://omlalala.io'
+SITEURL = 'http://omlalala.io'
 
 MARKUP = ('md', 'rst',)#'rst', 'html', 
 READERS = {
