@@ -1,4 +1,4 @@
-Title: "Alfred workflow 初阶探索"
+Title: Alfred workflow 初阶探索
 Date: 2017-09-04 21:02:37 +0800
 Tags: Alfred, workflow
 Slug: 2017-09-02-alfred-workflow

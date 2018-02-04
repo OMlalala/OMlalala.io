@@ -1,4 +1,4 @@
-Title:  "这才是心理学 第一章 笔记"
+Title:  这才是心理学 第一章 笔记
 Date:   2017-04-16 15:43:37 +0800
 Tags: psychology, stanovich
 Slug: 2017-4-15-how-to-think-straight-about-psychology-chap1
