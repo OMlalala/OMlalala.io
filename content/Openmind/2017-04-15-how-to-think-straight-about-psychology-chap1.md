@@ -40,7 +40,7 @@ Slug: 2017-4-15-how-to-think-straight-about-psychology-chap1
 此人就是加拿大认知科学家：斯坦诺维奇 (Keith E. Stanovich,
 1950年12月13日-)，2012年美国心理学会（APA）终身成就奖获得者。
 
-![stanovich](/images/keith_stanovich.png)
+![stanovich](../images/keith_stanovich.png)
 
 著作包括
 
@@ -165,7 +165,7 @@ Slug: 2017-4-15-how-to-think-straight-about-psychology-chap1
 - 野中郁次郎是谁？
 	- ”世界知识管理之父“ [野中郁次郎](http://wiki.mbalib.com/wiki/%E9%87%8E%E4%B8%AD%E9%83%81%E6%AC%A1%E9%83%8E)（Ikujiro Nonaka，1935年5月10日-）
 
-	- ![野中郁次郎](/images/野中郁次郎.jpg)
+	- ![野中郁次郎](../images/野中郁次郎.jpg)
 
 	- 代表作是他和竹内弘高合著的 [《创造知识的企业》](https://book.douban.com/subject/1811450/)（The Knowledge Creating Company）。
 
@@ -173,7 +173,7 @@ Slug: 2017-4-15-how-to-think-straight-about-psychology-chap1
 	- 1994年，野中郁次郎在论文 [A Dynamic Theory of Organizational Knowledge Creation](https://scholar.google.com/scholar?q=A+Dynamic+Theory+of+Organizational+Knowledge+Creation&hl=zh-CN&as_sdt=0&as_vis=1&oi=scholart&sa=X&ved=0ahUKEwjl4N2xwKbTAhXoilQKHeHpAj4QgQMIIzAA) 中提出了SECI模型，这篇论文目前在google Scholar 中被引用次数超过2万。
 - SECI模型是什么？
 
-![SCEI模型](/images/SCEI模型.gif)
+![SCEI模型](../images/SCEI模型.gif)
 
 现在，再回顾大妈的语音，才重新理解知识循环中的外在化、内在化、社会化等概念，明白了为什么要不断输出。
 

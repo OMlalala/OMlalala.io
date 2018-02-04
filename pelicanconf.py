@@ -128,7 +128,7 @@ LINKS = None
 ###############################################################   Publish abt.
 ###############################################################
 USE_FOLDER_AS_CATEGORY = True
-#DEFAULT_CATEGORY = 'Chaos'
+DEFAULT_CATEGORY = 'DebugUself'
 #DELETE_OUTPUT_DIRECTORY = None #因为嵌套仓库的原因,不能清除发布目录!
 
 # TEMPLATE_PAGES = {
