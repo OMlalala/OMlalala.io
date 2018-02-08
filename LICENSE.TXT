@@ -1,3 +1,5 @@
+MIT License
+
 Leo is Open Software and is distributed under the terms of the MIT
 License. The gist of the license is that Leo is absolutely free, even
 for commercial use (including resale). There is no GNU-like "copyleft"
