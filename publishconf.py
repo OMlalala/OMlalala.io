@@ -16,7 +16,8 @@ DELETE_OUTPUT_DIRECTORY = None #因为嵌套仓库的原因,不能清除发布�
 
 
 # Feed generation is usually not desired when developing
-CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
+#CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
+CATEGORY_FEED_ATOM = 'feeds/{slug}.atom.xml'
 
 TRANSLATION_FEED_ATOM = None
 FEED_ALL_RSS = None

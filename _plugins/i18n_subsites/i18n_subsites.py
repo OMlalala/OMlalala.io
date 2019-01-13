@@ -1,5 +1,4 @@
 """i18n_subsites plugin creates i18n-ized subsites of the default site
-
 This plugin is designed for Pelican 3.4 and later
 """
 
@@ -12,7 +11,10 @@ import posixpath
 from copy import copy
 from itertools import chain
 from operator import attrgetter
-from collections import OrderedDict
+try:
+    from collections.abc import OrderedDict
+except ImportError:
+    from collections import OrderedDict
 from contextlib import contextmanager
 from six.moves.urllib.parse import urlparse
 
@@ -22,7 +24,10 @@ import locale
 from pelican import signals
 from pelican.generators import ArticlesGenerator, PagesGenerator
 from pelican.settings import configure_settings
-from pelican.contents import Draft
+try:
+    from pelican.contents import Draft
+except ImportError:
+    from pelican.contents import Article as Draft
 
 
 # Global vars
@@ -42,7 +47,6 @@ _LOGGER = logging.getLogger(__name__)
 @contextmanager
 def temporary_locale(temp_locale=None):
     '''Enable code to run in a context with a temporary locale
-
     Resets the locale back when exiting context.
     Can set a temporary locale if provided
     '''
@@ -55,7 +59,6 @@ def temporary_locale(temp_locale=None):
 
 def initialize_dbs(settings):
     '''Initialize internal DBs using the Pelican settings dict
-
     This clears the DBs for e.g. autoreload mode to work
     '''
     global _MAIN_SETTINGS, _MAIN_SITEURL, _MAIN_LANG, _SUBSITE_QUEUE
@@ -72,7 +75,6 @@ def initialize_dbs(settings):
 
 def prepare_site_db_and_overrides():
     '''Prepare overrides and create _SITE_DB
-
     _SITE_DB.keys() need to be ready for filter_translations
     '''
     _SITE_DB.clear()
@@ -117,7 +119,6 @@ def initialize_plugin(pelican_obj):
 
 def get_site_path(url):
     '''Get the path component of an url, excludes siteurl
-
     also normalizes '' to '/' for relpath to work,
     otherwise it could be interpreted as a relative filesystem path
     '''
@@ -129,7 +130,6 @@ def get_site_path(url):
 
 def relpath_to_site(lang, target_lang):
     '''Get relative path from siteurl of lang to siteurl of base_lang
-
     the output is cached in _SITES_RELPATH_DB
     '''
     path = _SITES_RELPATH_DB.get((lang, target_lang), None)
@@ -144,7 +144,6 @@ def relpath_to_site(lang, target_lang):
 
 def save_generator(generator):
     '''Save the generator for later use
-
     initialize the removed content list
     '''
     _GENERATOR_DB[generator] = []
@@ -184,7 +183,6 @@ class GeneratorInspector(object):
 
     def __init__(self, generator):
         '''Identify the best known class of the generator instance
-
         The class '''
         self.generator = generator
         self.generators_info.update(generator.settings.get(
@@ -226,7 +224,6 @@ class GeneratorInspector(object):
 
 def filter_contents_translations(generator):
     '''Filter the content and translations lists of a generator
-
     Filters out
         1) translations which will be generated in a different site
         2) content that is not in the language of the currently
@@ -266,7 +263,6 @@ def filter_contents_translations(generator):
 
 def install_templates_translations(generator):
     '''Install gettext translations in the jinja2.Environment
-
     Only if the 'jinja2.ext.i18n' jinja2 extension is enabled
     the translations for the current DEFAULT_LANG are installed.
     '''
@@ -314,7 +310,6 @@ def add_variables_to_context(generator):
 
 def interlink_translations(content):
     '''Link content to translations in their main language
-
     so the URL (including localized month names) of the different subsites
     will be honored
     '''
@@ -329,7 +324,6 @@ def interlink_translations(content):
 
 def interlink_translated_content(generator):
     '''Make translations link to the native locations
-
     for generators that may contain translated content
     '''
     inspector = GeneratorInspector(generator)
@@ -339,7 +333,6 @@ def interlink_translated_content(generator):
 
 def interlink_removed_content(generator):
     '''For all contents removed from generation queue update interlinks
-
     link to the native location
     '''
     current_lang = generator.settings['DEFAULT_LANG']
@@ -353,13 +346,19 @@ def interlink_static_files(generator):
     '''Add links to static files in the main site if necessary'''
     if generator.settings['STATIC_PATHS'] != []:
         return                               # customized STATIC_PATHS
-    filenames = generator.context['filenames'] # minimize attr lookup
+    try: # minimize attr lookup
+        static_content = generator.context['static_content']
+    except KeyError:
+        static_content = generator.context['filenames']
     relpath = relpath_to_site(generator.settings['DEFAULT_LANG'], _MAIN_LANG)
     for staticfile in _MAIN_STATIC_FILES:
-        if staticfile.get_relative_source_path() not in filenames:
+        if staticfile.get_relative_source_path() not in static_content:
             staticfile = copy(staticfile) # prevent override in main site
             staticfile.override_url = posixpath.join(relpath, staticfile.url)
-            generator.add_source_path(staticfile)
+            try:
+                generator.add_source_path(staticfile, static=True)
+            except TypeError:
+                generator.add_source_path(staticfile)
 
 
 def save_main_static_files(static_generator):
@@ -372,7 +371,6 @@ def save_main_static_files(static_generator):
 
 def update_generators():
     '''Update the context of all generators
-
     Ads useful variables and translations into the template context
     and interlink translations
     '''
@@ -396,7 +394,6 @@ def get_pelican_cls(settings):
 
 def create_next_subsite(pelican_obj):
     '''Create the next subsite using the lang-specific config
-
     If there are no more subsites in the generation queue, update all
     the generators (interlink translations and removed content, add
     variables and translations to template context). Otherwise get the
