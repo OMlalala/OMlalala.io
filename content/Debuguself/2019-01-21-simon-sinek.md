@@ -22,6 +22,7 @@ Tags: debuguself
 	- 搜索 amazon 时, 发现读者书评也是推荐他的 TED 演讲: [How great leaders inspire action](https://www.ted.com/talks/simon_sinek_how_great_leaders_inspire_action)
 
 参考
+
 - [个人主页](https://startwithwhy.com/)
 - [wiki](https://en.wikipedia.org/wiki/Simon_Sinek)
 
@@ -48,11 +49,13 @@ Tags: debuguself
 (source: https://en.wikipedia.org/wiki/Simon_Sinek)
 
 三个部分
+
 - why -> purpose? cause? belif? your organization exist?
 - how
 - what
 
 思考方式(顺序)
+
 - 普罗大众: what -> how -> why
 - 伟大领袖: why -> how -> what
 
@@ -91,6 +94,7 @@ Tags: debuguself
 - **但是 google scholar 引用超 10 万次!**
 
 Two example
+
 - famous failure: TiVo
 - famous success: Dr. King "I have a dream" speech
 
@@ -105,11 +109,13 @@ Two example
 - 但是 google scholar 引用 4387 次
 
 参考
+
 - [創新擴散模型Diffusion of Innovation](http://blog.udn.com/HsuChunYi/45851952)
 - [diffusion-of-innovations 10 万次引用链接](https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=Diffusion+of+Innovations&btnG=)
 - 阳老师整理的豆列 [学术界引用最多的 64 本书](https://www.douban.com/doulist/45709528/), *diffusion of innovations* 排第 10 位
 
 深度预警
+
 - 两个意外收获的术语, 还未仔细阅读过相关书籍, 只是照搬 wiki 简述, 仍属司机知识...
 
 ### 其他: TED 使用体验
